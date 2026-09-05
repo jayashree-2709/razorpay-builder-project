@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Rescue Drone</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background: #172554;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .status {
+            font-size: 20px;
+            font-weight: bold;
+            color: green;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 8px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .feature {
+            display: inline-block;
+            width: 28%;
+            margin: 1%;
+            padding: 20px;
+            background: #eef2ff;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🚁 AI-Powered Rescue Drone</h1>
+    <p>Autonomous Search and Rescue System</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Drone Status</h2>
+        <p class="status">● ONLINE</p>
+        <p>Battery: 85%</p>
+        <p>GPS: Active</p>
+        <p>Mission: Search and Rescue</p>
+    </div>
+
+    <div class="card">
+        <h2>AI Detection</h2>
+        <p id="detection">No person detected</p>
+
+        <button onclick="detectPerson()">Start AI Detection</button>
+        <button onclick="emergency()">Emergency Alert</button>
+    </div>
+
+    <div class="card">
+        <h2>Drone Features</h2>
+
+        <div class="feature">
+            <h3>👤 Person Detection</h3>
+            <p>AI detects humans during rescue operations.</p>
+        </div>
+
+        <div class="feature">
+            <h3>🌡️ Thermal Camera</h3>
+            <p>Helps detect people in low-visibility conditions.</p>
+        </div>
+
+        <div class="feature">
+            <h3>📍 GPS Tracking</h3>
+            <p>Provides the location of detected victims.</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function detectPerson() {
+        document.getElementById("detection").innerHTML =
+            "⚠️ Person detected! Location: Sector A-12";
+    }
+
+    function emergency() {
+        alert("🚨 Emergency alert sent to rescue team!");
+    }
+</script>
+
+</body>
+</html>
